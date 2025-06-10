@@ -13,9 +13,9 @@ public class Vendedor implements Serializable {
 	private Date datanascimento;
 	private Double salarioBase;
 	
-	private Department departamento;
+	private Departamento departamento;
 
-	public Vendedor(Integer id, String name, String email, Date datanascimento, Double salarioBase, Department departamento) {
+	public Vendedor(Integer id, String name, String email, Date datanascimento, Double salarioBase, Departamento departamento) {
 		
 		this.id = id;
 		this.name = name;
@@ -69,11 +69,11 @@ public class Vendedor implements Serializable {
 		this.salarioBase = salarioBase;
 	}
 
-	public Department getDepartamento() {
+	public Departamento getDepartamento() {
 		return departamento;
 	}
 
-	public void setDepartamento(Department departamento) {
+	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
 	}
 
