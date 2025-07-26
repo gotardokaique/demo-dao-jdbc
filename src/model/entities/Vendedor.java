@@ -5,18 +5,19 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Vendedor implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name;
 	private String email;
 	private Date datanascimento;
 	private Double salarioBase;
-	
+
 	private Departamento departamento;
 
-	public Vendedor(Integer id, String name, String email, Date datanascimento, Double salarioBase, Departamento departamento) {
-		
+	public Vendedor(Integer id, String name, String email, Date datanascimento, Double salarioBase,
+			Departamento departamento) {
+
 		this.id = id;
 		this.name = name;
 		this.email = email;
@@ -26,7 +27,7 @@ public class Vendedor implements Serializable {
 	}
 
 	public Vendedor() {
-	
+
 	}
 
 	public Integer getId() {
@@ -96,10 +97,10 @@ public class Vendedor implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Vendedor [id=" + id + ", name=" + name + ", email=" + email + ", datanascimento=" + datanascimento
-				+ ", salarioBase=" + salarioBase + ", departamento=" + departamento + "]";
+		return String.format(
+				"Vendedor {\n" + "  id = %d,\n" + "  nome = '%s',\n" + "  email = '%s',\n" + "  dataNascimento = %s,\n"
+						+ "  salarioBase = %.2f,\n" + "  departamento = %s\n" + "}",
+				id, name, email, datanascimento, salarioBase, departamento);
 	}
-	
-	
 
 }
